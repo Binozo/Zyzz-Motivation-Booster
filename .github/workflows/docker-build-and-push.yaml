@@ -1,0 +1,20 @@
+name: Docker Build and Push
+on: [push, workflow_dispatch]
+jobs:
+  Build-And-Push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v2
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build the Docker image
+        run: |
+          docker build . --tag ghcr.io/binozo/zyzzmotivationbooster:latest
+          docker push ghcr.io/binozo/zyzzmotivationbooster:latest

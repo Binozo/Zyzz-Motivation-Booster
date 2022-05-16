@@ -23,6 +23,8 @@ RUN GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /go/bin/zyzzmotivationb
 # STEP 2 build a small image
 ############################
 FROM alpine:latest
+LABEL maintainer=binozoworks
+LABEL org.opencontainers.image.source="https://github.com/Binozo/Zyzz-Motivation-Booster"
 # Copy our static executable.
 COPY --from=builder /go/bin/zyzzmotivationbooster /go/bin/zyzzmotivationbooster
 # Run the hello binary.
