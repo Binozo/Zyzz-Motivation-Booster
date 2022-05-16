@@ -3,6 +3,8 @@ on: [push, workflow_dispatch]
 jobs:
   Build-And-Push:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     steps:
       - name: Get code
         uses: actions/checkout@v2
@@ -16,5 +18,5 @@ jobs:
 
       - name: Build the Docker image
         run: |
-          docker build . --tag ghcr.io/binozo/zyzzmotivationbooster:latest
-          docker push ghcr.io/binozo/zyzzmotivationbooster:latest
+          docker build . --tag ghcr.io/binozo/zyzz-motivation-booster:latest
+          docker push ghcr.io/binozo/zyzz-motivation-booster:latest
