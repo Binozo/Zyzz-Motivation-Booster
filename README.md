@@ -6,5 +6,5 @@ A Bot which sends you a motivational zyzz video every morning at 7 am through te
 
 ## Setup
 ```bash
-docker run --env telegrambottoken={$YOUR_TOKEN} --env telegramchatid={$YOUR_CHAT_ID} -d --restart unless-stopped ghcr.io/binozo/zyzz-motivation-booster:latest
+docker run --env telegrambottoken={$YOUR_TOKEN} --env telegramchatid={$YOUR_CHAT_ID} -d --restart unless-stopped --name zyzz_motivation_booster ghcr.io/binozo/zyzz-motivation-booster:latest
 ```
