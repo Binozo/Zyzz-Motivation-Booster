@@ -11,8 +11,8 @@ import (
 const (
 	balkan_gains_all_videos_playlist       = "https://www.youtube.com/watch?v=sOAi9JJhATE&list=UUPXRHu3iYggeluGLgz4QTOQ"
 	zyzz_inspirational_all_videos_playlist = "https://www.youtube.com/watch?v=QwIrRS3N1Zw&list=UUfgzNJDxhp3zZ3uNtfmKHTQ"
-	arcdelio_all_videos_playlist           = "https://www.youtube.com/watch?v=AawRADgo0fU&list=UUCCg8Fh5Avkt0lqD4wnAL6A"
-	daily_zyzz_all_videos_playlist         = "https://www.youtube.com/watch?v=WRQrQb4Xu2I&list=UU5mTOjypsz4bHilrl2HKT9g"
+	//arcdelio_all_videos_playlist           = "https://www.youtube.com/watch?v=AawRADgo0fU&list=UUCCg8Fh5Avkt0lqD4wnAL6A"
+	//daily_zyzz_all_videos_playlist         = "https://www.youtube.com/watch?v=WRQrQb4Xu2I&list=UU5mTOjypsz4bHilrl2HKT9g"
 )
 
 func GetVideoList() ([]*youtube.PlaylistEntry, error) {
@@ -25,19 +25,19 @@ func GetVideoList() ([]*youtube.PlaylistEntry, error) {
 	if err != nil {
 		return nil, err
 	}
-	playlist3, err := client.GetPlaylist(arcdelio_all_videos_playlist)
+	/*playlist3, err := client.GetPlaylist(arcdelio_all_videos_playlist)
 	if err != nil {
 		return nil, err
 	}
 	playlist4, err := client.GetPlaylist(daily_zyzz_all_videos_playlist)
 	if err != nil {
 		return nil, err
-	}
+	}*/
 	var videoList []*youtube.PlaylistEntry
 	videoList = append(videoList, playlist1.Videos...)
 	videoList = append(videoList, playlist2.Videos...)
-	videoList = append(videoList, playlist3.Videos...)
-	videoList = append(videoList, playlist4.Videos...)
+	/*videoList = append(videoList, playlist3.Videos...)
+	videoList = append(videoList, playlist4.Videos...)*/
 	return videoList, nil
 }
 
