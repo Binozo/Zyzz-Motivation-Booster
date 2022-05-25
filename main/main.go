@@ -23,6 +23,6 @@ func main() {
 	log.Println("Starting...")
 	telegram.SendMessage("Starting...")
 
-	log.Println("Wating till 7 am...")
+	log.Println("Wating...")
 	cron.Setup()
 }
