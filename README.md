@@ -1,6 +1,6 @@
 # [Zyzz](https://youtu.be/yDqk6KJVyP8) Motivation Booster
 
-A Bot which sends you a motivational zyzz video every 3 hours through telegram.
+A Bot which sends you a motivational zyzz video every day at 7 am through telegram.
 
 **Note:** My opinion does not necessarily reflect the opinions of the video creators.
 

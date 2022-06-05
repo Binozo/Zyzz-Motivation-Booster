@@ -39,8 +39,8 @@ func SendVideo() {
 
 func Setup() {
 	//gocron.ChangeLoc(time.UTC) Not working!
-	//gocron.Every(1).Day().At("05:00").Do(SendVideo)
-	//gocron.Every(1).Day().At("17:00").Do(SendVideo)
-	gocron.Every(8).Hour().Do(SendVideo)
+	gocron.Every(1).Day().At("05:00").Do(SendVideo)
+	gocron.Every(1).Day().At("17:00").Do(SendVideo)
+	//gocron.Every(8).Hour().Do(SendVideo)
 	<-gocron.Start()
 }
